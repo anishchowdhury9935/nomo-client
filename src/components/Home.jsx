@@ -40,18 +40,13 @@ export default function Home() {
             const scrollSection = document.getElementById('HeroSection_Page3_sticky_scroll_section')
             const windowWidth = window.innerWidth
             const offsetTop = stickySection.offsetTop
-            const percent = ((window.scrollY - offsetTop) / window.innerHeight) * (windowWidth > 426 ? 15 : 44)
+            // const percent = ((window.scrollY - offsetTop) / window.innerHeight) * (windowWidth > 426 ? 15 : 44)
+            const percent = ((window.scrollY - offsetTop) / window.innerHeight) * (windowWidth > 426 ? 19 : 55)
             scrollSection.style.transform = `translate3d(${percent}vw,0vw,0vw)`
             animateDiv.map(({ div, type, animationName }) => {
                 animateOnVisible(document.querySelector(`${type}${div}`), animationName)
             })
         })
-        // document.querySelector('.HeroSection_main').addEventListener("wheel", (event) => {
-        //     event.preventDefault();
-        //     const deltaY = event.deltaY;
-        //     const speed = deltaY / 5;
-        //     document.querySelector('.HeroSection_main').scrollTop += speed;
-        // });
     })
     return (
         <div className='HeroSection_main'>

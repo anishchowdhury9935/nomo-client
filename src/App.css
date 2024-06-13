@@ -1,8 +1,10 @@
 :root {
-  --primary-color: rgb(139, 233, 153);
+  /* --primary-color: rgb(139, 233, 153); */
+  --primary-color: rgb(28, 166, 48);
   --secondary-color: rgb(16, 24, 16);
   --secondary-light-color: rgb(38, 83, 45);
-  --primary-text-color: #54B848;
+  /* --primary-text-color: #54B848; */
+  --primary-text-color: rgb(28, 166, 48);
   --secondary-text-color: white;
   --navbar-padding: 10em;
   --hero-section-b-circle-hw: 42em;
@@ -389,15 +391,16 @@ div {
   max-width: 34em;
   width: 100%;
   height: 5em;
-  background-color: var(--primary-text-color);
+  background-color: var(--primary-color);
   border-radius: 10px;
-  box-shadow: 8px 8px 0px white;
+  box-shadow: 3px 3px 0px white;
   display: flex;
   align-items: center;
   padding: 0px 20px;
   justify-content: space-between;
   flex-direction: column;
   flex-shrink: 0;
+  color: black;
 }
 
 .ca_link_text {
@@ -526,9 +529,9 @@ div {
   text-transform: uppercase;
   font-size: calc(var(--primary-header-font-size) + 2em);
   box-shadow: 2px 2px 0px white;
-  text-decoration: underline;
   margin-bottom: 20px;
   background-color: var(--secondary-light-color);
+  color: white;
   width: fit-content;
   padding: 0.2em;
   border-radius: 20px;
@@ -666,6 +669,7 @@ div {
 
 #roadMap_img {
   width: fit-content;
+  scale: 0.8;
   height: 100%;
   pointer-events: none;
   user-select: none;
