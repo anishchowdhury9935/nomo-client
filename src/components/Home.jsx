@@ -19,7 +19,7 @@ import NavbarLinks from './card/NavbarLinks';
 import HelperFunction from '../../helper/HelperFunction';
 export default function Home() {
     const { animateOnVisible } = HelperFunction()
-    const contextData = useContext(context)
+    const contextData = useContext(context);
     const { componentCardData } = contextData;
     const ca = 'J3EEg43NaHQmPCNxhPjFZhsjwa6FJxaBA3pudQFyf4Jq'
     const [tempText, setTempText] = useState({ copyCa: 'copy ca' })
