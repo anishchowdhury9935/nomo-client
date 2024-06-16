@@ -1,10 +1,13 @@
 :root {
   /* --primary-color: rgb(139, 233, 153); */
+  --primary-gradient: linear-gradient(to top, #4fff4f, #b0fab0);
   --primary-color: rgb(28, 166, 48);
-  --secondary-color: rgb(16, 24, 16);
+  --secondary-color: rgb(222, 250, 222);
   --secondary-light-color: rgb(38, 83, 45);
+  --color-as-background: rgb(5, 5, 67);
   /* --primary-text-color: #54B848; */
-  --primary-text-color: rgb(28, 166, 48);
+  --color-as-background-sec: rgb(230, 230, 255);
+  --primary-text-color: rgb(0, 73, 0);
   --secondary-text-color: white;
   --navbar-padding: 10em;
   --hero-section-b-circle-hw: 42em;
@@ -77,14 +80,18 @@ div {
   overflow-y: scroll;
   overflow-x: hidden;
   perspective: 10px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
-  /* &::-webkit-scrollbar {
-    width: 5px;
-  }
-
-  &::-webkit-scrollbar-thumb {
-    background-color: var(--secondary-light-color);
-  } */
+#heroSection_background {
+  min-width: 100%;
+  min-height: 100%;
+  filter: brightness(0.8);
+  position: fixed;
+  right: 0;
+  bottom: 0;
 }
 
 
@@ -107,13 +114,15 @@ div {
 }
 
 .Navbar_main {
-
   width: 100%;
   padding: 0px var(--navbar-padding);
   display: flex;
   align-items: center;
   height: 100%;
-  backdrop-filter: blur(5px) saturate(200%);
+  /* backdrop-filter: blur(5px) saturate(200%); */
+  background-color: rgb(232, 255, 232);
+  border-bottom: 10px solid #004900;
+  border-radius: 0px 0px 30px 30px;
 }
 
 .Navbar_main_innerDiv {
@@ -142,7 +151,7 @@ div {
 
 
 #Logo_img {
-  width: 4em;
+  width: 3.5em;
   user-select: none;
 }
 
@@ -151,6 +160,7 @@ div {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-left: 5px;
 }
 
 .Logo_text {
@@ -184,8 +194,9 @@ div {
   min-width: 8em;
   max-width: 8em;
   margin-right: 1em;
-  background-color: var(--primary-color);
-  color: var(--secondary-color);
+  background: var(--primary-gradient);
+  backdrop-filter: blur(10px);
+  color: var(--primary-text-color);
   border-radius: 5px;
   display: flex;
   align-items: center;
@@ -229,7 +240,7 @@ div {
   white-space: nowrap;
   background-color: transparent;
   border: none;
-  color: var(--primary-color);
+  color: var(--secondary-light-color);
   margin-right: 1em;
   font-size: 1.4em;
   font-weight: 600;
@@ -270,16 +281,16 @@ div {
   z-index: 100;
   pointer-events: none;
   display: none;
-  align-items: flex-end;
 }
 
 .modal_inner_div {
-  height: 89%;
+  height: 100%;
   width: 100%;
   pointer-events: all;
 }
 
 .modal_side {
+  padding-top: 15%;
   height: 100%;
   width: 100%;
   background-color: var(--secondary-color);
@@ -317,11 +328,9 @@ div {
 
 .HeroSection_top {
   padding: 0px 10%;
-  /* Important */
-  padding-top: 6em;
+  padding-top: 7em;
   display: flex;
   height: 100vh;
-  background-color: var(--secondary-color);
   color: white;
   transform: translateZ(-40px);
   scale: 9;
@@ -337,16 +346,6 @@ div {
   flex-shrink: 0;
 }
 
-.HeroSection_top_nomo_text {
-  width: 100%;
-  height: 100%;
-  text-transform: uppercase;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: xx-large;
-}
-
 .HerSection_top_nomo_text_half {
   color: var(--primary-text-color);
   font-size: var(--hero-section-nomo-text-font-size);
@@ -360,6 +359,17 @@ div {
 .HeroSection_top_text {
   width: 100%;
   height: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  /* align-content: center; */
+}
+
+.nomo_header_img {
+  width: 100%;
+  min-width: 25em;
+  max-width: 48em;
 }
 
 .HeroSection_top_bottom_text {
@@ -372,11 +382,15 @@ div {
   align-items: center;
   display: flex;
   justify-content: center;
+
+  /* &> . {
+    background-color: red !important;
+  } */
 }
 
 .Not_missing_Out_text_heroS {
   font-size: 2em;
-  color: var(--primary-color);
+  color: var(--secondary-color);
   white-space: nowrap;
 }
 
@@ -391,9 +405,9 @@ div {
   max-width: 34em;
   width: 100%;
   height: 5em;
-  background-color: var(--primary-color);
+  background-color: var(--secondary-color);
   border-radius: 10px;
-  box-shadow: 3px 3px 0px white;
+  box-shadow: 5px 5px 0px var(--primary-text-color);
   display: flex;
   align-items: center;
   padding: 0px 20px;
@@ -421,7 +435,7 @@ div {
 
   &>button {
     font-size: large;
-    background-color: var(--secondary-color);
+    background-color: var(--primary-color);
     padding: 8px;
     border-radius: 5px;
     border: none;
@@ -438,6 +452,7 @@ div {
   width: 100%;
   height: 100%;
   display: flex;
+  color: var(--color-as-background);
   align-items: center;
   justify-content: center;
   text-transform: uppercase;
@@ -469,6 +484,18 @@ div {
   background-color: var(--secondary-light-color);
 }
 
+.infinteScroll_HeroSection_first_color_strip {
+  background-color: #5cb156;
+  width: 100%;
+  height: 1em;
+}
+
+.infinteScroll_HeroSection_second_color_strip {
+  height: 2em;
+  width: 100%;
+  background-color: #9be69b;
+}
+
 .scroll-text {
   display: inline-block;
   font-size: 3em;
@@ -491,7 +518,10 @@ div {
   background-color: var(--secondary-color);
   height: var(--primary-heroSection-section-height);
   overflow: hidden;
+  height: 150vh;
   padding: 0px calc(var(--navbar-padding) + -100px);
+  border-bottom: 10px solid var(--color-as-background);
+  border-radius: 0px 0px 40px 40px;
 }
 
 .HeroSection_inner_Page2 {
@@ -526,7 +556,6 @@ div {
 
 
 .HeroSection_Page2_text_header {
-  text-transform: uppercase;
   font-size: calc(var(--primary-header-font-size) + 2em);
   box-shadow: 2px 2px 0px white;
   margin-bottom: 20px;
@@ -637,13 +666,6 @@ div {
 
 
 
-.HeroSection_Page4 {
-  width: 100vw;
-  height: fit-content;
-  align-content: center;
-}
-
-
 
 .HeroSection_Page3 {
   width: 100vw;
@@ -654,13 +676,14 @@ div {
 .HeroSection_Page3_sticky {
   overflow: hidden;
   position: sticky;
-  top: 20px;
+  top: -130px;
   width: 100%;
   height: 30%;
+  overflow: visible;
 }
 
 .HeroSection_Page3_sticky_scroll_section {
-  height: 100%;
+  height: 150%;
   width: 200vw;
   will-change: transform;
   display: flex;
@@ -668,8 +691,9 @@ div {
 }
 
 #roadMap_img {
-  width: fit-content;
-  scale: 0.8;
+  width: max-content;
+  scale: 1.9;
+  filter: opacity(0.92);
   height: 100%;
   pointer-events: none;
   user-select: none;
@@ -680,37 +704,49 @@ div {
   width: 100vw;
   display: flex;
   flex-direction: var(--primary-flex-direction);
+  background: rgb(253, 241, 232);
+  background: linear-gradient(180deg, rgba(253, 241, 232, 1) 5%, rgba(253, 218, 188, 1) 98%);
+  align-items: center;
+  justify-content: center;
 }
 
 .HeroSection_Page4_chart {
-  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 40%;
-  padding: 0 10px;
+  width: 60%;
+  height: max-content;
+  padding: 0 100px;
+  background-color: #042D62;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 5px solid #2674da;
+  border-bottom: 15px solid #2674da;
 }
 
-#HeroSection_Page4_chart_img,
-#HeroSection_Page4_img_hy {
+#HeroSection_Page4_chart_img {
   min-width: 10em;
-  max-width: 90%;
+  width: 100%;
+  max-width: 20em;
+  scale: 1.4;
+
+  display: flex;
   border-radius: 20px;
-  box-shadow: 2px 2px 0px var(--secondary-light-color);
 }
 
 .HeroSection_Page4_img_div {
-  width: 60%;
-  flex-shrink: 0;
-  height: 100%;
+  width: 100%;
+  height: 50vh;
+  padding: 0px 100px;
+  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 #HeroSection_Page4_img_hy {
-  box-shadow: none;
   display: var(--primary-display);
+  max-width: 50em;
 }
 
 #HeroSection_Page4_img_uy {
@@ -725,6 +761,7 @@ div {
   height: 100%;
   padding-bottom: 125%;
 }
+
 #dexscreener-embed iframe {
   position: absolute;
   width: 60%;
@@ -760,7 +797,8 @@ div {
   flex-shrink: 0;
   text-align: center;
   align-content: center;
-  &>video{
+
+  &>video {
     border-radius: 10px;
   }
 }
@@ -812,24 +850,32 @@ div {
 }
 
 .HeroSection_Page7 {
-  height: max-content;
+  /* border-top: 10px solid var(--secondary-color); */
   display: flex;
   justify-content: center;
+  align-items: center;
   pointer-events: none;
   user-select: none;
+  background-color: #101810;
 }
 
 #aboutDev_img {
-  max-width: 40em;
+  max-width: 28em;
+  /* border-radius: 10px; */
   width: 100%;
 }
 
 .HeroSection_last {
   height: 20vh;
   color: var(--primary-color);
+  background-color: var(--secondary-color);
   text-align: center;
+  text-transform: uppercase;
+  padding: 1em;
   align-content: center;
+
 }
+
 .HeroSection_Page5_text {
   height: max-content;
   width: 100%;
@@ -837,12 +883,30 @@ div {
   justify-content: center;
   align-items: center;
   margin-bottom: 10px;
-  & > video{
+  flex-direction: column;
+
+  &>video {
     border-radius: 10px;
   }
 }
 
+.HeroSection_Page5_text_div_text {
+  background: #fff3eb;
+  height: 10vh;
+  width: 100%;
+  position: relative;
+  top: 1px;
+  /* border-bottom: 10px solid var(--color-as-background); */
+  color: var(--color-as-background);
+  text-align: center;
+  align-content: center;
+  font-size: 2.1em;
+}
 
+.presale_part {
+  height: max-content;
+  width: 100%;
+}
 
 
 
@@ -868,9 +932,18 @@ div {
     --primary-display: none;
     --secondary-display: flex;
   }
-  .HeroSection_Page5_text{
-      margin-top: 20em;
+
+  .HeroSection_Page4_img_div {
+    /* height:unset; */
+    overflow: visible;
+    align-items: flex-start;
+
   }
+
+  .HeroSection_Page5_text {
+    margin-top: 20em;
+  }
+
   #dexscreener-embed iframe {
     left: 10%;
     width: 80%;
@@ -883,19 +956,6 @@ div {
     width: 100%;
   }
 
-  .HeroSection_Page4_img_div {
-    width: 100%;
-    height: 50%;
-  }
-
-  #HeroSection_Page4_chart_img {
-    max-width: 25em;
-  }
-
-  .HeroSection_Page4_chart {
-    height: max-content;
-    width: 100%;
-  }
 
   .HeroSection_Page2_img_main {
     width: 100%;
@@ -951,7 +1011,7 @@ div {
 
   #dexscreener-embed iframe {
     left: 1%;
-    width: 99%;
+    width: 98%;
     height: 60%;
     border-radius: 5px;
   }
@@ -969,10 +1029,6 @@ div {
     display: none;
   }
 
-  #Logo_img {
-    width: 3.5em;
-  }
-
   .Logo_text {
     font-size: 2.2em;
   }
@@ -985,9 +1041,35 @@ div {
   .Navbar_hamburger_menu {
     display: block;
   }
+
+  .HeroSection_Page2 {
+    height: 180vh;
+  }
+
+  .HeroSection_last {
+    font-size: x-small;
+  }
+
+  .HeroSection_Page4_chart {
+    width: 98%;
+    height: 85%;
+  }
+
+  #HeroSection_Page4_chart_img {
+    scale: 1.4
+  }
+
+  #heroSection_background {
+    top: 10px;
+    right: unset;
+  }
 }
 
 @media only screen and (max-width: 426px) {
+  #HeroSection_Page4_chart_img {
+    scale: 1.9
+  }
+
   :root {
     --hero-section-nomo-text-font-size: 3.5em;
     --primary-header-font-size: 1em;
@@ -995,11 +1077,20 @@ div {
     --roadMap-margin-left: 120%;
   }
 
+  .HeroSection_top_text {
+    height: 30%;
+    padding-top: 2em;
+  }
+
   #dexscreener-embed iframe {
     height: 90% !important;
   }
+
   #HeroSection_Page4_img_uy {
-    max-width: 24em;
+    /* max-width: 26em; */
+    min-width: 25em;
+    width: 240%;
+    margin-left: 0.5em;
   }
 
   .HeroSection_Page3_sticky {
@@ -1017,11 +1108,8 @@ div {
     font-size: 1.6em;
   }
 
-  #HeroSection_Page4_chart_img {
-    max-width: 20em;
+  .step4_img {
+    max-width: 23em !important;
   }
 
-  .step4_img {
-    max-width: 21.5em !important;
-  }
 }
