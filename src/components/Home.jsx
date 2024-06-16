@@ -64,7 +64,7 @@ export default function Home() {
                     <section className="HeroSection_top">
                         <div className="HeroSection_top_inner_div">
                             <div className="HeroSection_top_text animate__fadeIn animate__animated">
-                                <img src={headerLogo} alt="" className='nomo_header_img' />
+                                <img src={headerLogo} alt="" className='nomo_header_img' loading='lazy' />
                             </div>
                             <div className="HeroSection_top_bottom_text">
                                 <h1 className="Not_missing_Out_text_heroS">

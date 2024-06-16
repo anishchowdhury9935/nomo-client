@@ -518,7 +518,7 @@ div {
   background-color: var(--secondary-color);
   height: var(--primary-heroSection-section-height);
   overflow: hidden;
-  height: 150vh;
+  height: 55em;
   padding: 0px calc(var(--navbar-padding) + -100px);
   border-bottom: 10px solid var(--color-as-background);
   border-radius: 0px 0px 40px 40px;
