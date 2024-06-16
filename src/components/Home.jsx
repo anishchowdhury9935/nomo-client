@@ -84,7 +84,7 @@ export default function Home() {
                                         </div>
                                         <div className="heroSection_ca_link_box_copy_part">
                                             <button type='button' onClick={() => {
-                                                setTempText({ ...tempText, copyCa: 'copied' })
+                                                setTempText({ ...tempText, copyCa: 'copied !' })
                                                 setTimeout(() => {
                                                     setTempText({ ...tempText, copyCa: 'copy ca' })
                                                 }, 900)
