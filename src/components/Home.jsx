@@ -42,7 +42,7 @@ export default function Home() {
             const windowWidth = window.innerWidth
             const offsetTop = stickySection.offsetTop
             // const percent = ((window.scrollY - offsetTop) / window.innerHeight) * (windowWidth > 426 ? 15 : 44)
-            const percent = ((window.scrollY - offsetTop) / window.innerHeight) * (windowWidth > 426 ? 8 : 25.5)
+            const percent = ((window.scrollY - offsetTop) / window.innerHeight) * (windowWidth > 426 ? 8 : 35)
             scrollSection.style.transform = `translate3d(${percent}vw,0vw,0vw)`
             animateDiv.map(({ div, type, animationName }) => {
                 animateOnVisible(document.querySelector(`${type}${div}`), animationName)
@@ -141,9 +141,9 @@ export default function Home() {
                             </div>
                         </div>
                     </section>
-                    <div className="HeroSection_Page4_header">
-
-                    </div>
+                    {/* <div className="HeroSection_Page4_header">
+                                            
+                    </div> */}
                     <div className="HeroSection_Page5_text_div_text">
                         NoMOnics
                     </div>

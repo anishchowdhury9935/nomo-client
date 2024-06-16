@@ -883,10 +883,12 @@ div {
   justify-content: center;
   align-items: center;
   margin-bottom: 10px;
-  flex-direction: column;
-
+  flex-direction: column;background: rgb(255,255,255);
+  background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(202,255,202,1) 95%);
+  padding: 10px 0px;
   &>video {
     border-radius: 10px;
+    border: 10px solid rgb(185, 254, 185);
   }
 }
 
@@ -1063,6 +1065,9 @@ div {
     top: 10px;
     right: unset;
   }
+  #roadMap_img{
+    scale: 2.2;
+  }
 }
 
 @media only screen and (max-width: 426px) {
@@ -1074,7 +1079,7 @@ div {
     --hero-section-nomo-text-font-size: 3.5em;
     --primary-header-font-size: 1em;
     --primary-header-font-size: 0.7em;
-    --roadMap-margin-left: 120%;
+    --roadMap-margin-left: 160%;
   }
 
   .HeroSection_top_text {
@@ -1111,5 +1116,5 @@ div {
   .step4_img {
     max-width: 23em !important;
   }
-
+  
 }
