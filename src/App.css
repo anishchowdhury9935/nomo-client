@@ -26,6 +26,7 @@
   margin: 0;
   padding: 0;
   outline: none;
+  scroll-behavior: smooth;
 }
 
 *::-webkit-scrollbar {
@@ -36,12 +37,11 @@
   background-color: var(--secondary-light-color);
   color: white;
 }
-
 html {
   font-family: "Comic Neue", cursive;
   font-weight: 900;
   line-height: 1.15;
-  scroll-behavior: smooth;
+  
 }
 
 body {
