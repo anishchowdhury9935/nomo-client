@@ -51,7 +51,7 @@ export default function Home() {
     })
     return (
         <>
-            <video src={background} id='heroSection_background' autoPlay muted loop/>
+            <video src={background} id='heroSection_background' autoPlay muted loop />
             <div className='HeroSection_main'>
                 <div className="heroSection_top_bubbles bubble_main">
                     <div id='bubble1' className='bubble_section_div'> </div>
@@ -121,11 +121,11 @@ export default function Home() {
                                 <h2 className='NoMO_basically_heroSection'>Welcome to NoMO, the perfect opportunity for those who missed out on Doge, Shib, and Bonk!
                                 </h2>
                                 <div className="purpose_lines_heroSection">
-                                    <h3>Missed out on Doge? No problem!</h3>
+                                    <h3>Missed out on Doge? No problem 😟!</h3>
                                     <h3>
-                                        Missed out on Shib? We've got you covered!</h3>
+                                        Missed out on Shib? We've got you covered 😢!</h3>
                                     <h3>
-                                        Missed out on Bonk? Join us now!</h3>
+                                        Missed out on Bonk? Join us now 😭!</h3>
                                 </div>
                                 <div className="last_lines_heroSection">
                                     <h1>DO NOT MISS OUT Again!!!</h1>
