@@ -104,7 +104,7 @@ export default function Home() {
                         <div className='infinteScroll_HeroSection_first_color_strip'>  </div>
                         <div className='infinteScroll_HeroSection_second_color_strip'> </div>
                     </div>
-                    <section className='HeroSection_Page2'>
+                    <section className='HeroSection_Page2' id='HeroSection_Page2'>
                         <div className="heroSection_section2_bubbles bubble_main">
                             <div id='bubble1' className='bubble_section_2 bubble_section_div'> </div>
                             <div id='bubble2' className='bubble_section_2 bubble_section_div'> </div>

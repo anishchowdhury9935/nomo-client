@@ -14,7 +14,7 @@ export default function NavBarHam() {
                     return <NavBarHamCard data={data} key={index} />
                 })
             }
-            <a href='#' className='NavBarHam_about_btn_div'>
+            <a href='#HeroSection_Page2' className='NavBarHam_about_btn_div'>
                 <h2>
                     About Nomo 😀
                 </h2>

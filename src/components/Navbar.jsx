@@ -33,7 +33,7 @@ export default function Navbar() {
                             </div>
                         </div>
                         <div className="Navbar_right_links" id='Navbar_right_links'>
-                            <a className='Navbar_about_btn' href='div'>About Nomo</a>
+                            <a className='Navbar_about_btn' href='#HeroSection_Page2'>About Nomo</a>
                             {
                                 componentCardData.navLinkArray.map((link, index) => {
                                     return <NavbarLinks data={{ ...link }} key={index} />
