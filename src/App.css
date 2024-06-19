@@ -923,6 +923,8 @@ div {
   font-size: large;
   align-content: center;
   text-align: center;
+  position: relative;
+  z-index: 100;
 }
 
 .jupiter_stepLink {
@@ -930,9 +932,6 @@ div {
   overflow: hidden;
   text-overflow: ellipsis;
   text-transform: uppercase;
-  position: relative;
-  z-index: 100;
-
   &>a {
     text-transform: initial;
     /* border: 1px solid red; */
