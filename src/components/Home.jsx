@@ -179,6 +179,25 @@ export default function Home() {
                             </div>
                         </div>
                     </section>
+                    <div className='HeroSection_stepLinks'>
+                        <div className="jupiter_stepLink">
+                            🔗Link to jup.ag : <a href="https://jup.ag/swap/SOL
+-J3EEg43NaHQmPCNxhPjFZhsjw
+a6FJxaBA3pudQFyf4Jq" target='_blank' rel="noreferrer">https://jup.ag/swap/SOL
+                                -J3EEg43NaHQmPCNxhPjFZhsjw
+                                a6FJxaBA3pudQFyf4Jq</a>
+                        </div>
+                        <div className="swap_stepLinks">
+                            <div className='swap_stepLinks_text'>
+                                🔁 swap NoMo from swap.assetdash.com to get more free coins 🤑:
+                            </div>
+                            <div>
+                                <a href="https://swap.assetdash.com/sol
+-nomo" target='_blank' rel="noreferrer">https://swap.assetdash.com/sol
+                                    -nomo</a>
+                            </div>
+                        </div>
+                    </div>
                     <section className="HeroSection_Page7">
                         <img src={aboutDev} alt="" id='aboutDev_img' />
                     </section>
