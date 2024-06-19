@@ -930,9 +930,13 @@ div {
   overflow: hidden;
   text-overflow: ellipsis;
   text-transform: uppercase;
+  position: relative;
+  z-index: 100;
 
   &>a {
     text-transform: initial;
+    /* border: 1px solid red; */
+
   }
 }
 
