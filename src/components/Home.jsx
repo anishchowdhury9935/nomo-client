@@ -134,16 +134,6 @@ export default function Home() {
                             </div>
                         </div>
                     </section>
-                    <section className='HeroSection_Page3'>
-                        <div className="HeroSection_Page3_sticky">
-                            <div className="HeroSection_Page3_sticky_scroll_section" id='HeroSection_Page3_sticky_scroll_section'>
-                                <img src={roadMap} alt="" id='roadMap_img' />
-                            </div>
-                        </div>
-                    </section>
-                    {/* <div className="HeroSection_Page4_header">
-                                            
-                    </div> */}
                     <div className="HeroSection_Page5_text_div_text">
                         NoMOnics
                     </div>
