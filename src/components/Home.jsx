@@ -37,13 +37,6 @@ export default function Home() {
     ]
     window.addEventListener('load', () => {
         document.querySelector('.HeroSection_main').addEventListener('scroll', () => {
-            const stickySection = document.querySelector('.HeroSection_Page3_sticky')
-            const scrollSection = document.getElementById('HeroSection_Page3_sticky_scroll_section')
-            const windowWidth = window.innerWidth
-            const offsetTop = stickySection.offsetTop
-            // const percent = ((window.scrollY - offsetTop) / window.innerHeight) * (windowWidth > 426 ? 15 : 44)
-            const percent = ((window.scrollY - offsetTop) / window.innerHeight) * (windowWidth > 426 ? 8 : 35)
-            scrollSection.style.transform = `translate3d(${percent}vw,0vw,0vw)`
             animateDiv.map(({ div, type, animationName }) => {
                 animateOnVisible(document.querySelector(`${type}${div}`), animationName)
             })

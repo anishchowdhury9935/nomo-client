@@ -153,6 +153,7 @@ div {
 
 #Logo_img {
   width: 3.5em;
+  scale: 1.4;
   user-select: none;
 }
 
@@ -614,7 +615,6 @@ div {
   pointer-events: none;
   z-index: 1;
   perspective: 10px;
-
   &>div {
     transform-style: preserve-3d;
     transform: translateZ(-10px);
